@@ -1,0 +1,30 @@
+[
+    {
+    "id": 0,
+    "text": "bob ici",
+    "entities": [{
+        "start": 0,
+        "end": 2,
+        "label": "name"
+      },
+      {
+        "start": 4,
+        "end": 6,
+        "label": "location"
+      }]
+  },
+  {
+    "id": 0,
+    "text": "ana paris",
+    "entities": [{
+        "start": 0,
+        "end": 2,
+        "label": "name"
+      },
+      {
+        "start": 4,
+        "end": 8,
+        "label": "location"
+      }]
+  }
+]
