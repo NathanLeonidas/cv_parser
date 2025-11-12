@@ -94,6 +94,8 @@ pip install transformers torch datasets evaluate flask gunicorn PyPDF2
 python training.py
 ```
 
+Please note the db.json file is an example, and isn't what we trained the model on.
+
 ### Validating the Model
 
 ```bash
