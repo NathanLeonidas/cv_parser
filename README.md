@@ -16,23 +16,23 @@ Sysnav required a lightweight, scalable, non-hallucinating model that could prec
 ## Project Structure
 
 ```
-cv_parse/
-├── training.py              # Model training pipeline
-├── validate.py              # Model validation
-├── db_cv.json              # Training dataset (CV data)
-├── db_merged.json          # Merged dataset
-├── db_notcv.json           # Non-CV data
-├── output/                 # Trained model artifacts
-│   ├── model.safetensors
-│   ├── tokenizer.json
-│   └── config.json
-└── server_files/           # Flask web application
-    ├── mainfile.py         # Flask app & routes
-    ├── inference.py        # CV parsing inference
-    ├── read_pdf.py         # PDF processing
-    ├── wsgi.py             # WSGI configuration
-    ├── templates/          # HTML templates
-    └── uploads/            # Uploaded CV storage
+
+training.py              # Model training pipeline
+validate.py              # Model validation
+db_cv.json              # Training dataset (CV data)
+db_merged.json          # Merged dataset
+db_notcv.json           # Non-CV data
+output/                 # Trained model artifacts
+├── model.safetensors
+├── tokenizer.json
+└── config.json
+server_files/           # Flask web application
+├── mainfile.py         # Flask app & routes
+├── inference.py        # CV parsing inference
+├── read_pdf.py         # PDF processing
+├── wsgi.py             # WSGI configuration
+├── templates/          # HTML templates
+└── uploads/            # Uploaded CV storage
 ```
 
 ## Components
