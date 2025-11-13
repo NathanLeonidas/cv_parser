@@ -93,6 +93,7 @@ pip install transformers torch datasets evaluate flask gunicorn PyPDF2
 ```bash
 python training.py
 ```
+We only provided a mock database db.json, even though weights of the model in /output were trained on synthetic data.
 
 ### Validating the Model on given Text
 
