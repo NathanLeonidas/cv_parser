@@ -16,7 +16,6 @@ Sysnav required a lightweight, scalable, non-hallucinating model that could prec
 ## Project Structure
 
 ```
-
 training.py              # Model training pipeline
 validate.py              # Model validation
 db_cv.json              # Training dataset (CV data)
