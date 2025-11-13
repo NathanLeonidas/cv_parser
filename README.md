@@ -94,57 +94,20 @@ pip install transformers torch datasets evaluate flask gunicorn PyPDF2
 python training.py
 ```
 
-Please note the db.json file is an example, and isn't what we trained the model on.
-
-### Validating the Model
+### Validating the Model on given Text
 
 ```bash
 python validate.py
 ```
 
 ### Running the Web Server
-
-```bash
-cd server_files
-python mainfile.py
-```
-
+Only a sample of the full web server has been backed up, the rest is at SYSNAV.
+Running this (thus incomplete) web server will require you to adjust the path used to save the pdfs in mainfile.py and the path used to deserialize the model in inference.
 Access the application at `http://localhost:5000`
+Deployment on remote server requires a running a gunicorn and nginx daemon (use the provided wsgi.py if needed).
 
-### Using Inference Directly
 
-```python
-from server_files.inference import get_tags
 
-entities = get_tags('path/to/cv.pdf')
-print(entities)  # Returns dict of entities by label
-```
 
-## Model Details
 
-- **Base Model**: camembert-base (French BERT)
-- **Task**: Token Classification (NER)
-- **Framework**: Hugging Face Transformers
-- **Training Device**: GPU (if available) / CPU
 
-## Output Structure
-
-The inference returns a dictionary with entity labels as keys:
-
-```python
-{
-    "name": ["John Doe"],
-    "skills": ["Python", "React", "SQL"],
-    "mail": ["john@example.com"],
-    "location": ["Paris, France"],
-    ...
-}
-```
-
-## Deployment
-
-The project includes WSGI configuration (server_files/wsgi.py) for production deployment with Gunicorn:
-
-```bash
-gunicorn -w 4 -b 0.0.0.0:5000 mainfile:app
-```
