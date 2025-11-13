@@ -101,7 +101,7 @@ python validate.py
 ```
 
 ### Running the Web Server
-Only a sample of the full web server has been backed up, the rest is at SYSNAV.
+Only a sample of the full (now retired) web server has been backed up, the rest is at SYSNAV.
 Running this (thus incomplete) web server will require you to adjust the path used to save the pdfs in mainfile.py and the path used to deserialize the model in inference.
 Access the application at `http://localhost:5000`
 Deployment on remote server requires a running a gunicorn and nginx daemon (use the provided wsgi.py if needed).
